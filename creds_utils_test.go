@@ -77,7 +77,11 @@ func Test_FormatUserConfig(t *testing.T) {
 func validateSeed(t *testing.T, decorated []byte, nk nkeys.KeyPair) {
 	kind := ""
 	seed := seedKey(nk, t)
-	switch string(seed[0:2]) {
+	pre, err := getPrefix(seed)
+	if err != nil {
+		t.Fatal(err)
+	}
+	switch string(pre) {
 	case "SO":
 		kind = "operator"
 	case "SA":
