@@ -56,7 +56,8 @@ func Test_DecorateJwt(t *testing.T) {
 
 func Test_FormatUserConfig(t *testing.T) {
 	token, kp := makeJWT(t)
-	d, err := FormatUserConfig(token, seedKey(kp, t))
+	seed := seedKey(kp, t)
+	d, err := FormatUserConfig(token, seed)
 	if err != nil {
 		t.Fatal(err)
 	}
