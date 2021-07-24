@@ -279,8 +279,8 @@ func Test_SystemAccount(t *testing.T) {
 	}{
 		{"", false},
 		{"x", true},
-		{"ADZ547B24WHPLWOK7TMLNBSA7FQFXR6UM2NZ4HHNIB7RDFVZQFOZ4GQQ", false},
-		{"ADZ547B24WHPLWOK7TMLNBSA7FQFXR6UM2NZ4HHNIB7RDFVZQFOZ4777", true},
+		{"410356c4e819e18c3eb4a0c8ddbb6793132c73e0c5860018c3215e480b574cdd7d4f4dd1", false},
+		{"410356c4e819e18c3eb4a0c8ddbb6793132c73e0c5860018c3215e480b574cdd7d4f4777", true},
 	}
 	for i, tt := range asuTests {
 		err := operatorWithSystemAcc(t, tt.accKey)
