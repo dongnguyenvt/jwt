@@ -236,7 +236,6 @@ func testAccountWithAccountServerURL(t *testing.T, u string) error {
 }
 
 func Test_SystemAccount(t *testing.T) {
-	t.Skip("FIXME: generate new token due to encoding is changed")
 	operatorWithSystemAcc := func(t *testing.T, u string) error {
 		kp := createOperatorNKey(t)
 		pk := publicKey(kp, t)
@@ -264,8 +263,8 @@ func Test_SystemAccount(t *testing.T) {
 	}{
 		{"", false},
 		{"x", true},
-		{"ADZ547B24WHPLWOK7TMLNBSA7FQFXR6UM2NZ4HHNIB7RDFVZQFOZ4GQQ", false},
-		{"ADZ547B24WHPLWOK7TMLNBSA7FQFXR6UM2NZ4HHNIB7RDFVZQFOZ4777", true},
+		{"4103665afb7630040d4fc453e750aff9b5111e1206f85949d21b4ddd3d0a938bdef87aaf", false},
+		{"4103665afb7630040d4fc453e750aff9b5111e1206f85949d21b4ddd3d0a938bdef87777", true},
 	}
 	for i, tt := range asuTests {
 		err := operatorWithSystemAcc(t, tt.accKey)
