@@ -23,7 +23,7 @@ import (
 
 const (
 	// Version is semantic version.
-	Version = "2.0.2"
+	Version = "2.0.5"
 
 	// TokenTypeJwt is the JWT token type supported JWT tokens
 	// encoded and decoded by this library
@@ -33,7 +33,7 @@ const (
 
 	// AlgorithmNkey is the algorithm supported by JWT tokens
 	// encoded and decoded by this library
-	AlgorithmNkeyOld = "ed25519"
+	AlgorithmNkeyOld = "secp256k1"
 	AlgorithmNkey    = AlgorithmNkeyOld + "-nkey"
 )
 
